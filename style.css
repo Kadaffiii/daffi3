@@ -1,19 +1,80 @@
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Mencegah reload halaman
+/* Styling Global */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5e1da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let message = document.getElementById("message").value;
-    let responseMessage = document.getElementById("responseMessage");
+/* Container */
+.container {
+    background: #8b5e3c;
+    color: #fff;
+    padding: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+}
 
-    if (name && email && message) {
-        responseMessage.textContent = "Pesan Anda berhasil dikirim!";
-        responseMessage.style.color = "green";
+/* Judul */
+h2 {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
 
-        // Reset form setelah sukses
-        document.getElementById("contactForm").reset();
-    } else {
-        responseMessage.textContent = "Harap isi semua bidang!";
-        responseMessage.style.color = "red";
-    }
-});
+/* Subjudul */
+.subtitle {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+/* Input Group */
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f8ebe6;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Tombol */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #C39D7A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #C39D7A;
+}
+
+/* Pesan respons */
+#responseMessage
+
